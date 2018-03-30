@@ -1,0 +1,16 @@
+<div class="container home">
+    <p class="neon-glow-red">
+        <a [routerLink]="['./logos']" [routerLinkActive]="['active']">Logos</a> |
+        <a [routerLink]="['./2dart']" [routerLinkActive]="['active']">2D</a> |
+        <a [routerLink]="['./businesscards']" [routerLinkActive]="['active']">Business Cards</a> |
+        <a [routerLink]="['./patterns']" [routerLinkActive]="['active']">Patterns</a> |
+        <a [routerLink]="['./bookillustrations']" [routerLinkActive]="['active']">Book Illustrations</a> |
+        <a [routerLink]="['./illustrations']" [routerLinkActive]="['active']">Illustrations</a> |
+        <a [routerLink]="['./digitalpaintings']" [routerLinkActive]="['active']">Digital Paintings</a> |
+        <a [routerLink]="['./3dmodeling']" [routerLinkActive]="['active']">3D Modeling</a> |
+        <a [routerLink]="['./sculptures']" [routerLinkActive]="['active']">Sculptures</a>
+    </p>
+    <div class="main">
+        <router-outlet #appOutlet="outlet"></router-outlet>
+    </div>
+</div>

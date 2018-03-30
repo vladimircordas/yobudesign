@@ -1,21 +1,114 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="neon-glow-green neon-center">
+    <a>
+        <p>YOBU&nbsp;&nbsp;^<br> &nbsp;DESIGN
+        </p>
+    </a>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<div class="container-fluid container-reset menu mobile" ng-sticky [offSet]=" 0 " [addClass]="'is-sticky'">
+    <nav class="navbar navbar-inverse border-bottom">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button " class="navbar-toggle collapsed" data-target="#myNavbar" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+          </button>
+                <a class="navbar-brand neon-glow-red-active" href="" routerLink="home" routerLinkActive="active">
+                    <p>YOBU&nbsp;&nbsp;^<br> &nbsp;DESIGN
+                    </p>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar" [collapse]="isCollapsed">
+                <ul class="nav navbar-nav nav-top">
+                    <li>
+                        <a target="_self" href="" routerLink="about" routerLinkActive="active">
+                            <div class="cube">
+                                <div class="front glow">About</div>
+                                <div class="side glow">About</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_self" href="" routerLink="galleries" routerLinkActive="active">
+                            <div class="cube">
+                                <div class="front glow">gallery</div>
+                                <div class="side glow">gallery</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_self" href="" routerLink="whyus" routerLinkActive="active">
+                            <div class="cube">
+                                <div class="front glow">Why us?</div>
+                                <div class="side glow">Why us?</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_self" href="" routerLink="contact" routerLinkActive="active">
+                            <div class="cube">
+                                <div class="front glow">Contact</div>
+                                <div class="side glow">Contact</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div class="main" [@animRoutes]="getPage(appOutlet)">
+    <router-outlet #appOutlet="outlet"></router-outlet>
+</div>
+
+
+
+<hr>
+<div class="container socials">
+    <h2>If you just want to say "Hi ", or you have a project that you would like to get me involved in, please don't be shy and contact me at:
+    </h2>
+    <div class="row">
+        <div class="col-lg-12 col-xs-12 social-bottom">
+            <ul class="no-padding">
+                <li class="contactme neon-glow-red">
+                    <a href="mailto:yobudesign@gmail.com" target="_top">
+                        <i class="fa fa-envelope-o fa-3x line-height" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="contactme neon-glow-red">
+                    <a href="facebook.com/yobudesign" target="_top">
+                        <i class="fa fa-facebook fa-3x line-height" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="contactme neon-glow-red deviant-margin">
+                    <a href="twitter.com/yobudesign" target="_top">
+                        <i class="fa fa-deviantart fa-3x " aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="contactme neon-glow-red">
+                    <a href="dribble.com/yobudesign" target="_top">
+                        <i class="fa fa-dribbble fa-3x line-height" aria-hidden="true"></i>
+                    </a>
+                </li>
+                <li class="contactme neon-glow-red">
+                    <a href="flickr.com/yobudesign" target="_top">
+                        <i class="fa fa-flickr fa-3x line-height" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid footer">
+    <footer>
+        <div class="arrow-up">
+            <p>&copy; YoBuDesign 2017</p>
+            <p>Website created by<br> Vladimir Cordas</p>
+        </div>
+    </footer>
+</div>

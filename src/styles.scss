@@ -1,1 +1,743 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import 'variables';
+@import './node_modules/font-awesome/scss/font-awesome';
+@import '~@ngx-gallery/core/styles/gallery';
+@import '~@ngx-gallery/core/styles/lightbox';
+
+/* FONTS */
+
+@font-face {
+    font-family: 'yoburegular';
+    src: url('./assets/fonts/yobu-webfont.woff2') format('woff2'), url('./assets/fonts/yobu-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nidus_sansregular';
+    src: url('./assets/fonts/nidsans-webfont.eot');
+    src: url('./assets/fonts/nidsans-webfont.eot?#iefix') format('embedded-opentype'), url('./assets/fonts/nidsans-webfont.woff2') format('woff2'), url('./assets/fonts/nidsans-webfont.woff') format('woff'), url('./assets/fonts/nidsans-webfont.ttf') format('truetype'), url('./assets/fonts/nidsans-webfont.svg#nidus_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* CUSTOM CSS */
+
+body {
+    background-color: #171717;
+    background-image: url('./assets/img/background2.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    font-family: 'nidus_sansregular';
+    overflow-x: hidden;
+    width: 100%;
+}
+
+hr {
+    border-top-color: darkred;
+}
+
+.container-reset {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 9999;
+}
+
+nav .container-fluid {
+    height: 53px;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+
+/* NAVIGACIJA */
+
+.navbar-inverse {
+    background-image: -webkit-linear-gradient(top, #3c3c3c 0, #222 100%);
+    background-image: -o-linear-gradient(top, #3c3c3c 0, #222 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#3c3c3c), to(#222));
+    background-image: linear-gradient(to bottom, #3c3c3c 0, #222 100%);
+    background-repeat: repeat-x;
+}
+
+.nav-top li:first-of-type {
+    margin-left: 30px;
+}
+
+.navbar-brand p {
+    font-family: 'yoburegular';
+    line-height: 24px;
+    margin: 5px 0 0 20px;
+    font-size: 21px;
+}
+
+@media (min-width: 768px) {
+    .navbar-header {
+        float: left;
+    }
+}
+
+
+/* ABOUT */
+
+.container.home,
+.container.about,
+.container.socials,
+.container-fluid.footer {
+    padding: 50px 15px;
+    overflow-x: hidden;
+}
+
+.container-fluid.footer {
+    padding: 0 15px;
+}
+
+
+/* SOCIALS + FOOTER */
+
+.social-bottom {
+    padding: 50px 0 0 0;
+    text-align: center;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.contactme {
+    width: 55px;
+    text-align: center;
+    display: inline-block;
+}
+
+.contactme>a {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    color: red;
+    line-height: 30px;
+}
+
+.contactme>a:hover {
+    color: darkred;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+.contactme>li {
+    float: none;
+    display: inline-block;
+}
+
+
+/* 3D rotacija dugmeta */
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-nav>li {
+    padding: 0 15px;
+}
+
+.navbar-nav>li>a {
+    padding: 0;
+}
+
+.navbar-brand {
+    padding: 0px;
+}
+
+.border-bottom {
+    border-bottom: darkred solid 1px;
+}
+
+.cube {
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 auto;
+    height: 50px;
+    -webkit-transition: -webkit-transform .15s linear;
+    transition: transform .15s linear;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.cube a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.front,
+.side {
+    background: black;
+    border: 1px solid darkred;
+}
+
+.front {
+    -webkit-transform: translateZ(25px);
+    transform: translateZ(25px);
+}
+
+.side {
+    -webkit-transform: rotateX(-90deg) translateZ(-25px);
+    transform: rotateX(-90deg) translateZ(-25px);
+}
+
+.cube:hover {
+    -webkit-transform: rotateX(89deg);
+    transform: rotateX(89deg);
+}
+
+
+/* GALLERY */
+
+ngx-gallery {
+    margin: 0 auto;
+    display: block !important;
+    padding: 50px 0;
+    width: 100%;
+}
+
+.ngx-gallery-thumbnail:hover {
+    transform: scale(1.025);
+}
+
+
+/* FOOTER */
+
+.arrow-up p {
+    color: inherit;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    top: 50px;
+    left: -160px;
+    position: relative;
+    width: 320px;
+    height: 30px;
+}
+
+.jumbotron {
+    background-color: transparent;
+}
+
+.jumbotron hr {
+    margin-top: 140px;
+}
+
+h3 {
+    margin-left: 2%;
+}
+
+#footer-jumbotron {
+    padding: 48px 0 0 0;
+    margin: 0;
+}
+
+.arrow-up {
+    border-bottom: 150px solid black;
+    border-left: 800px solid transparent;
+    border-right: 800px solid transparent;
+    border-top: 0px solid transparent;
+    background-position: bottom center;
+    height: 0;
+    left: 50%;
+    margin: 0;
+    margin-left: -800px;
+    padding: 0;
+    position: relative;
+    width: 0;
+}
+
+
+/* NEON GLOW STUFF */
+
+a {
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.neon-glow-green.neon-center {
+    padding: 50px 0;
+}
+
+.neon-glow-green a {
+    pointer-events: none;
+    cursor: default;
+    color: red !important;
+    font-size: 28px !important;
+    line-height: 56px;
+    text-decoration: none;
+    font-family: yoburegular;
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                        supported by Chrome and Opera */
+}
+
+.neon-glow-green+hr {
+    margin-top: 60px !important;
+}
+
+.neon-glow-green a {
+    pointer-events: none;
+    cursor: default;
+    color: darkred !important;
+    font-size: 28px !important;
+    line-height: 56px;
+    text-decoration: none;
+    font-family: yoburegular;
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                        supported by Chrome and Opera */
+}
+
+.neon-glow-red a {
+    color: darkred;
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+}
+
+.neon-glow-red p {
+    color: darkred;
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+}
+
+.neon-glow-red a:hover,
+.neon-glow-red p:hover {
+    color: darkred;
+    text-decoration: none;
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                        supported by Chrome and Opera */
+}
+
+.neon-glow-red-active span {
+    cursor: pointer;
+    color: #8B0000;
+    text-decoration: none;
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                        supported by Chrome and Opera */
+}
+
+.neon-glow-red-active p {
+    color: darkred;
+}
+
+.active.neon-glow-red-active p {
+    cursor: pointer;
+    color: #8B0000;
+    text-decoration: none;
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                        supported by Chrome and Opera */
+}
+
+.active .cube .glow {
+    cursor: pointer;
+    color: #8B0000;
+    text-decoration: none;
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@-webkit-keyframes neon4 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px darkred, 0 0 70px darkred, 0 0 80px darkred, 0 0 100px darkred, 0 0 150px darkred;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px darkred, 0 0 35px darkred, 0 0 40px darkred, 0 0 50px darkred, 0 0 75px darkred;
+    }
+}
+
+@-webkit-keyframes neon2 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    }
+}
+
+@-webkit-keyframes neon3 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+    }
+}
+
+@-webkit-keyframes neon1 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px red, 0 0 70px red, 0 0 80px red, 0 0 100px red, 0 0 150px red;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px red, 0 0 35px red, 0 0 40px red, 0 0 50px red, 0 0 75px red;
+    }
+}
+
+@-webkit-keyframes neon5 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+    }
+}
+
+@-webkit-keyframes neon6 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    }
+}
+
+
+/*glow for mozilla*/
+
+@-moz-keyframes neon4 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px darkred, 0 0 70px darkred, 0 0 80px darkred, 0 0 100px darkred, 0 0 150px darkred;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px darkred, 0 0 35px darkred, 0 0 40px darkred, 0 0 50px darkred, 0 0 75px darkred;
+    }
+}
+
+@-moz-keyframes neon2 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    }
+}
+
+@-moz-keyframes neon3 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+    }
+}
+
+@-moz-keyframes neon1 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px red, 0 0 70px red, 0 0 80px red, 0 0 100px red, 0 0 150px red;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px red, 0 0 35px red, 0 0 40px red, 0 0 50px red, 0 0 75px red;
+    }
+}
+
+@-moz-keyframes neon5 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+    }
+}
+
+@-moz-keyframes neon6 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    }
+}
+
+
+/*glow*/
+
+@keyframes neon4 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px darkred, 0 0 70px darkred, 0 0 80px darkred, 0 0 100px darkred, 0 0 150px darkred;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px darkred, 0 0 35px darkred, 0 0 40px darkred, 0 0 50px darkred, 0 0 75px darkred;
+    }
+}
+
+@keyframes neon2 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+    }
+}
+
+@keyframes neon3 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B, 0 0 100px #FFDD1B, 0 0 150px #FFDD1B;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B, 0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+    }
+}
+
+@keyframes neon1 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px red, 0 0 70px red, 0 0 80px red, 0 0 100px red, 0 0 150px red;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px red, 0 0 35px red, 0 0 40px red, 0 0 50px red, 0 0 75px red;
+    }
+}
+
+@keyframes neon5 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF9900, 0 0 70px #FF9900, 0 0 80px #FF9900, 0 0 100px #FF9900, 0 0 150px #FF9900;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF9900, 0 0 35px #FF9900, 0 0 40px #FF9900, 0 0 50px #FF9900, 0 0 75px #FF9900;
+    }
+}
+
+@keyframes neon6 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
+    }
+}
+
+.neon-center p {
+    margin: 0 auto;
+    font-size: 100px;
+    line-height: 113px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1367px) {}
+
+@media screen and (max-width: 1200px) {
+    .jumbotron h1,
+    .jumbotron .h1 {
+        font-size: 2.3em;
+    }
+}
+
+@media (min-width: 768px) {
+    .contactme {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: 750px) {
+    /* CSS rules here for screens lower than 750px */
+    .center-menu {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .button {
+        width: 80%;
+    }
+    .fixed-menu,
+    .sidebar-text,
+    .sidebar-menu-wrapper {
+        display: none;
+    }
+    nav li {
+        width: 100%;
+    }
+    nav ul {
+        width: 100%;
+    }
+    .navbar li {
+        margin: 0 auto;
+    }
+    .cube {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .neon-center p {
+        margin: 100px auto 0 auto;
+        font-size: 72px;
+        line-height: 80px;
+    }
+    .container-50 {
+        width: 85%;
+    }
+    .deviant-margin {
+        margin-top: 110px;
+    }
+    li {
+        display: list-item;
+        text-align: center;
+    }
+    .line-height {
+        line-height: 1.5em;
+    }
+    .navbar-nav {
+        margin: 10px 0 0 0;
+    }
+    .menu {
+        top: 0px;
+        position: fixed;
+    }
+    .jumbotron {
+        padding: 0;
+    }
+    .nav-top li:first-of-type {
+        margin-left: 0px;
+    }
+    .neon-glow-green.neon-center {
+        display: none;
+    }
+}
+
+@media (max-width: 580px) {
+    .img-about-profile {
+        width: 300px !important;
+        height: 300px !important;
+    }
+    .img-container-about {
+        width: 100% !important;
+    }
+    h1+p {
+        width: 100%;
+        font-size: 18px;
+    }
+    p+p {
+        width: 100%;
+    }
+    h1,
+    .h1 {
+        width: 90%;
+        font-size: 20px;
+    }
+    .alien~p {
+        width: 90%;
+        font-size: 16px;
+    }
+    .yobudesign-art {
+        font-size: 18px;
+    }
+    h2 {
+        font-size: 20px;
+        width: 100%;
+    }
+}
+
+.text-container-about {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
